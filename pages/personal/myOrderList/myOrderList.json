@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "custom-tab-bar": "../../../components/custom-tab-bar/index"
+    },
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#fff",
+    "navigationBarTitleText": "订单列表"
+}

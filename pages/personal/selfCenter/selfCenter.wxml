@@ -1,0 +1,65 @@
+<view class="box">
+    <view class="bd">
+        <view class="block-4">
+            <view class="group-3">
+                <view class="block-2">
+                    <view class="pic" style="display:inline-block;border-radius:50%;overflow:hidden;">
+                        <open-data type="userAvatarUrl" wx:if="{{isLogin}}"></open-data>
+                        <image class="pic" src="./images/img_12998_0_3.png" wx:else></image>
+                    </view>
+                    <text bindtap="goToLogin" class="please-login">Hi {{holderName}}</text>
+                </view>
+                <view class="group-2">
+                    <view bindtap="myOrder" class="wrap">
+                        <text class="num">{{orders_count}}</text>
+                        <text class="my-order">我的订单</text>
+                    </view>
+                    <view class="div"></view>
+                    <view bindtap="myCoupon" class="block-3">
+                        <text class="num-2">{{coupons_count}}</text>
+                        <text class="benifit">我的优惠券</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="main">
+        <view class="block-6">
+            <view bindtap="goToStoreAddress" class="group-4">
+                <image class="othertc" src="./images/img_12998_0_4.png"></image>
+                <text class="title">小马维修-门店地址</text>
+            </view>
+            <view class="block-5">
+                <view class="empty"></view>
+            </view>
+            <view class="group-5">
+                <image class="nodata-search" src="./images/img_12998_0_5.png"></image>
+                <text class="online-customer-service">在线客服</text>
+                <button class="lianxibutton" openType="contact"></button>
+            </view>
+        </view>
+    </view>
+    <view class="main">
+        <view class="block-9">
+            <view bindtap="myFeedback" class="container-2">
+                <image class="image" src="./images/img_12998_0_8.png"></image>
+                <text class="lets-comment">来评一评</text>
+            </view>
+            <view class="block-7">
+                <view class="div-2"></view>
+            </view>
+            <view bindtap="aboutUs" class="group-6">
+                <image class="wu" src="./images/img_12998_0_6.png"></image>
+                <text class="about-us">关于我们</text>
+            </view>
+            <view class="container-3">
+                <view class="empty-2"></view>
+            </view>
+            <view bindtap="myHelpCenter" class="block-8">
+                <image class="score-card" src="./images/img_12998_0_7.png"></image>
+                <text class="help-center">帮助中心</text>
+            </view>
+        </view>
+    </view>
+    <image bindtap="callPhone" class="ft" src="./images/img_12998_0_9.png"></image>
+</view>

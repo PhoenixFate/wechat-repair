@@ -1,0 +1,8 @@
+{
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark",
+    "navigationBarTitleText": "手机回收",
+    "usingComponents": {
+        "custom-tab-bar": "../../../components/custom-tab-bar/index"
+    }
+}

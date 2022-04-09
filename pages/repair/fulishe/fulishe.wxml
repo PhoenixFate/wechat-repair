@@ -1,0 +1,59 @@
+<view class="fulishe_container">
+    <view class="" style="font-size:0">
+        <image class="fulishe_title" src="{{bannerInfo.picture_path}}"></image>
+    </view>
+    <view class="type_wrap">
+        <view bindtap="changeType" class="type {{selectedIndex==0?'active':''}}" data-index="0">
+            全部
+        </view>
+        <view bindtap="changeType" class="type {{selectedIndex==1?'active':''}}" data-index="1">
+            维修券
+        </view>
+        <view bindtap="changeType" class="type {{selectedIndex==2?'active':''}}" data-index="2">
+            回收券
+        </view>
+        <view bindtap="changeType" class="type {{selectedIndex==3?'active':''}}" data-index="3">
+            优品券
+        </view>
+    </view>
+    <view class="nocoupon" wx:if="{{!couponList.length}}">暂无优惠券活动</view>
+    <scroll-view scrollY class="scrollView {{isFullSucreen?'fullscreen':''}}" style="height:{{scrollViewHeight}}">
+        <view class="coupon_container">
+            <view class="coupon_wrap {{item.coupon_type=='0'?'recyclecoupon_wrap':''}}" wx:for="{{couponList}}" wx:key="index">
+                <view class="price_wrap">
+                    <view class="price" wx:if="{{item.coupon_type==2}}">
+                        <view class="rate">{{item.discount*10}}</view>
+                        <view class="sym">折</view>
+                    </view>
+                    <view class="price" wx:else>
+                        <view class="sym">￥</view>
+                        <view class="rate">
+                            {{item.coupon_type!=0?item.discount:item.increase}}
+                        </view>
+                    </view>
+                    <view class="condition">
+                        {{item.coupon_type==2||item.coupon_type==3?'不限金额使用':item.coupon_type==1?'满'+item.satisfy+'元可减':'满'+item.satisfy+'元增值'}}
+                    </view>
+                </view>
+                <view class="use_condition_wrap">
+                    <view class="name">{{item.coupon_name}}</view>
+                    <view class="fault">{{item.mould_fault?item.mould_fault:'全部机型，全部故障'}}</view>
+                    <view class="time">{{item.time}}</view>
+                    <view class="city">{{item.city?item.city:'全国通用'}}</view>
+                </view>
+                <view bindtap="lingquNow" class="btn" data-number="{{item.batch_number}}" data-shr="{{item.is_shr}}" wx:if="{{isLogin&&item.status==1}}">
+                    立即领取
+                </view>
+                <view class="lingguang" data-number="{{item.batch_number}}" wx:if="{{isLogin&&(item.status==2||item.status==3||item.status==4)}}">
+                    已领完
+                </view>
+                <view bindtap="useNow" class="shiyongnow" data-number="{{item.batch_number}}" data-shr="{{item.is_shr}}" wx:if="{{isLogin&&item.status==5}}">
+                    立即使用
+                </view>
+                <button bindgetphonenumber="getPhoneNumber" class="btn" openType="getPhoneNumber" wx:if="{{!isLogin}}">
+                    立即领取
+                </button>
+            </view>
+        </view>
+    </scroll-view>
+</view>

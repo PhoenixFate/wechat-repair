@@ -1,0 +1,71 @@
+<view class="recycle_container">
+    <view bindtap="goSearchPage" class="search_container">
+        <image class="" src="../../../img/wx_recycle/search.png"></image>
+        <view class="">输入您要搜索的机型</view>
+    </view>
+    <view class="nav_container">
+        <image bindtap="goNavTab" class="" data-set="../../recycle/phonelist/phonelist" src="../../../img/wx_recycle/recycle.png"></image>
+        <image bindtap="goTab" class="" data-set="../../repair/home/home" src="../../../img/wx_recycle/repair.png"></image>
+        <image bindtap="goTab" class="" data-set="../../HiYouxuan/youxuanhome/youxuanhome" src="../../../img/wx_recycle/youpin.png"></image>
+    </view>
+    <view class="self_model_container" wx:if="{{deviceInfo}}">
+        <view class="model_name">检测到您的机型：{{deviceInfo.name}}</view>
+        <view class="model_recycle_info_wrap">
+            <image class="" src="{{deviceInfo.src}}"></image>
+            <view class="info_wrap">
+                <view class="price">
+                    <view class="price_title">最高回收价：</view>
+                    <view class="count">￥{{deviceInfo.avg_price}}</view>
+                </view>
+                <view class="btn_wrap">
+                    <view bindtap="changeModel" class="change_model">更换机型</view>
+                    <view bindtap="getPrice" class="test_price" data-mid="{{deviceInfo.id}}" data-name="{{deviceInfo.name}}">估价换钱</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="repaircenter_container" wx:if="{{nearbyRepaircenter}}">
+        <view class="repaircenter_title">
+            <view class="title_wrap">
+                <view class="title">附近Hi回收门店</view>
+                <view class="distance" wx:if="{{isGlocation}}">
+                    <image class="" src="../../../img/wx_recycle/distance.png"></image>
+                    <view class="">{{nearbyRepaircenter.nearDistance}}</view>
+                </view>
+            </view>
+            <view bindtap="goOtherRepaircenter" class="other_wrap">其他门店></view>
+        </view>
+        <view class="repaircenter_info_wrap">
+            <view class="repaircenter_info">
+                <view class="name">{{nearbyRepaircenter.address}}</view>
+                <view class="tel">电话：{{nearbyRepaircenter.tel}}</view>
+            </view>
+            <image bindtap="openLocation" class="nav" data-lat="{{nearbyRepaircenter.lat}}" data-lng="{{nearbyRepaircenter.lng}}" src="../../../img/wx_recycle/nav.png"></image>
+        </view>
+    </view>
+    <view class="recycle_process_container">
+        <image class="" src="../../../img/wx_recycle/process.png"></image>
+    </view>
+    <view class="hotrecycle_container" wx:if="{{hotRecycleData.length}}">
+        <view class="hotrecycle_title_wrap">
+            <view class="title">热门回收机型</view>
+            <view bindtap="changeModel" class="more">更多</view>
+        </view>
+        <view class="hotrecycle_model_wrap">
+            <view bindtap="goGujia" class="model_wrap {{index%2==0?'addmargin':''}}" data-mid="{{item.Id}}" data-name="{{item.MouldName}}" wx:for="{{hotRecycleData}}" wx:key="index">
+                <image class="modelimage" src="{{item.src}}"></image>
+                <view class="model_info">
+                    <view class="model_name">{{item.MouldName}}</view>
+                    <view class="wenan">最高回收价</view>
+                    <view class="price">
+                        <view class="sym">￥</view>
+                        <view class="count">{{item.max_price}}</view>
+                    </view>
+                </view>
+                <view class="tips">
+                    去估价
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

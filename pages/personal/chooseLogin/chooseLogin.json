@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "小马维修",
+    "enablePullDownRefresh": false,
+    "navigationBarBackgroundColor": "#ffffff",
+    "disableScroll": true,
+    "usingComponents": {
+        "custom-tab-bar": "../../../components/custom-tab-bar/index"
+    }
+}

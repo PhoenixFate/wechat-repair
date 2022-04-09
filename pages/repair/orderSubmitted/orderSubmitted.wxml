@@ -1,0 +1,13 @@
+<view class="order_success">
+    <view class="order_success_img">
+        <image src="../../../img/wx_order/orderSuccess.png"></image>
+    </view>
+    <view class="order_success_txt">
+        <view class="order_success_txt_one">订单提交成功</view>
+        <view class="order_success_txt_two">请耐心等候,小马维修将马上联系您</view>
+    </view>
+    <view class="order_success_btn">
+        <view bindtap="goToOrder" class="btn_one">查看订单</view>
+        <view bindtap="goToHome" class="btn_one">返回首页</view>
+    </view>
+</view>

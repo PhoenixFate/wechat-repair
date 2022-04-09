@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "订单评价",
+    "usingComponents": {
+        "custom-tab-bar": "../../../components/custom-tab-bar/index"
+    }
+}

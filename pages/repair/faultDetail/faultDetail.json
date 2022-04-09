@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "维修故障",
+    "usingComponents": {
+        "custom-tab-bar": "../../../components/custom-tab-bar/index"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "质保信息",
+    "usingComponents": {
+        "custom-tab-bar": "../../../components/custom-tab-bar/index"
+    }
+}

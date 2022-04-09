@@ -1,0 +1,152 @@
+.phonelist_container .search_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 110rpx;
+    background: #f9f9f9;
+}
+
+.phonelist_container .search_container .search {
+    margin-top: 20rpx;
+    width: 692rpx;
+    height: 60rpx;
+    background: white;
+    box-shadow: 0px 6rpx 8rpx 0px rgba(0,0,0,0.08);
+    border-radius: 8rpx;
+    color: #C7C0BC;
+    font-size: 24rpx;
+    text-align: center;
+    line-height: 60rpx;
+}
+
+.phonelist_container .phone_brand_container .series_wrap {
+    width: 100%;
+    height: 92rpx;
+    box-shadow: 0px 8rpx 16rpx 0px rgba(0,0,0,0.06);
+    position: relative;
+    z-index: 1;
+}
+
+.phonelist_container .phone_brand_container .series_wrap .series_scroll {
+    padding: 25rpx 30rpx;
+    box-sizing: border-box;
+    width: 100%;
+    height: 92rpx;
+    white-space: nowrap;
+}
+
+.phonelist_container .phone_brand_container .series_wrap .series_scroll .series {
+    margin-right: 58rpx;
+    display: inline-block;
+    color: #C7C0BC;
+    font-size: 30rpx;
+    position: relative;
+    z-index: 0;
+}
+
+.phonelist_container .phone_brand_container .series_wrap .series_scroll .series .bottombg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 11rpx;
+    background: #ffe3d6;
+    z-index: -1;
+}
+
+.phonelist_container .phone_brand_container .series_wrap .series_scroll .series.active {
+    color: #ff5000;
+}
+
+.phonelist_container .phone_brand_container .brand_model_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.phonelist_container .phone_brand_container .brand_model_wrap .brand_wrap {
+    width: 160rpx;
+}
+
+.phonelist_container .phone_brand_container .brand_model_wrap .brand_wrap .brand {
+    width: 100%;
+    height: 112rpx;
+    background: #fff;
+    border-bottom: 1rpx solid #E4E0DE;
+    line-height: 112rpx;
+    text-align: center;
+    color: #584F4F;
+    font-size: 26rpx;
+    position: relative;
+}
+
+.phonelist_container .phone_brand_container .brand_model_wrap .brand_wrap .brand .leftbg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18rpx;
+    height: 112rpx;
+    background: -webkit-gradient(linear,left top,right top,from(#ffd5c2),to(#ffbfa1));
+    background: linear-gradient(90deg,#ffd5c2 0%,#ffbfa1 100%);
+}
+
+.phonelist_container .phone_brand_container .brand_model_wrap .brand_wrap .brand.active {
+    background: #f9f9f9;
+    color: #584F4F;
+    font-size: 30rpx;
+    font-weight: bold;
+}
+
+.phonelist_container .phone_brand_container .brand_model_wrap .brand_wrap .brand.noborder {
+    border-bottom: 0;
+}
+
+.phonelist_container .phone_brand_container .brand_model_wrap .model_wrap {
+    width: 590rpx;
+    background: #f9f9f9;
+}
+
+.phonelist_container .phone_brand_container .brand_model_wrap .model_wrap .model {
+    height: 112rpx;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1rpx solid #E4E0DE;
+}
+
+.phonelist_container .phone_brand_container .brand_model_wrap .model_wrap .model image {
+    margin-left: 10rpx;
+    margin-right: 20rpx;
+    width: 65rpx;
+    height: 88rpx;
+}
+
+.phonelist_container .phone_brand_container .brand_model_wrap .model_wrap .model .number {
+    margin-left: 10rpx;
+    margin-right: 20rpx;
+    width: 65rpx;
+    height: 88rpx;
+    text-align: center;
+    line-height: 88rpx;
+    color: #584F4F;
+    font-size: 30rpx;
+}
+
+.phonelist_container .phone_brand_container .brand_model_wrap .model_wrap .model .model_name {
+    color: #584F4F;
+    font-size: 30rpx;
+}
+
+.phonelist_container .phone_brand_container .brand_model_wrap .model_wrap .model.noborder {
+    border-bottom: 0;
+}

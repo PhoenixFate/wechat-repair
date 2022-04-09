@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "回收机型搜索",
+    "usingComponents": {
+        "custom-tab-bar": "../../../components/custom-tab-bar/index"
+    }
+}

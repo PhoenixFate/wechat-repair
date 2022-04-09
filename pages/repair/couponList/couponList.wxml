@@ -1,0 +1,40 @@
+<view class="coupon">
+    <view class="couponInput">
+        <input bindinput="setCouponCode" placeholder="请输入优惠券码" placeholderStyle="color:#ababab;" value="{{couponCode}}"></input>
+        <view bindtap="useBtn" class="couponUseBtn">兑换</view>
+    </view>
+    <view class="{{isFullSucreen?'fix-Full-button':''}}" style="margin: 144rpx 0 180rpx;">
+        <view bindtap="chooseCoupon" class="couponListItem" data-couponCode="{{item.code}}" data-index="{{index}}" data-useable="{{item.useable}}" wx:for="{{couponList}}" wx:key="key">
+            <view class="couponListItem_body">
+                <view class="type">
+                    <view class="typeTxt">
+                        <text wx:if="{{item.type=='0'}}">满减</text>
+                        <text wx:if="{{item.type=='1'}}">折扣</text>
+                        <text wx:if="{{item.type=='2'}}">优惠</text>
+                    </view>
+                    <view class="{{couponChoose&&couponIndex==index?'active':''}}"></view>
+                </view>
+                <view class="content">
+                    <view class="contentMain" wx:if="{{item.type=='0'}}">
+                        <view class="contentTitle">满{{item.discounts.aim}}元减{{item.discounts.discount}}元</view>
+                        <view class="contentCode">{{item.code}}</view>
+                        <view class="contentRule">{{item.name}}，{{item.model}}</view>
+                    </view>
+                    <view class="contentMain" wx:if="{{item.type=='1'}}">
+                        <view class="contentTitle">{{item.discounts.discount}}折</view>
+                        <view class="contentCode">{{item.code}}</view>
+                        <view class="contentRule">{{item.name}}，{{item.model}}</view>
+                    </view>
+                    <view class="contentMain" wx:if="{{item.type=='2'}}">
+                        <view class="contentTitle">{{item.discounts.discount}}元优惠券</view>
+                        <view class="contentCode">{{item.code}}</view>
+                        <view class="contentRule">{{item.name}}，{{item.model}}</view>
+                    </view>
+                    <view class="couponDate">有效期至{{item.end_time}}</view>
+                </view>
+                <view class="title">优惠券</view>
+            </view>
+        </view>
+    </view>
+    <view bindtap="noUseCoupon" class="noUseBtn">不使用优惠券</view>
+</view>

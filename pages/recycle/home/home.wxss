@@ -1,0 +1,356 @@
+.recycle_container {
+    padding: 30rpx;
+}
+
+.recycle_container .search_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    height: 60rpx;
+    box-shadow: 0px 6rpx 8rpx 0px rgba(0,0,0,0.08);
+    border-radius: 4rpx;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.recycle_container .search_container image {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.recycle_container .search_container view {
+    font-size: 24rpx;
+    color: #C7C0BC;
+}
+
+.recycle_container .nav_container {
+    margin-top: 30rpx;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.recycle_container .nav_container image {
+    width: 230rpx;
+    height: 186rpx;
+}
+
+.recycle_container .self_model_container {
+    margin-top: 40rpx;
+}
+
+.recycle_container .self_model_container .model_name {
+    font-size: 30rpx;
+    color: #ACA3A3;
+}
+
+.recycle_container .self_model_container .model_recycle_info_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 30rpx;
+}
+
+.recycle_container .self_model_container .model_recycle_info_wrap image {
+    width: 110rpx;
+    height: 110rpx;
+    margin-right: 18rpx;
+}
+
+.recycle_container .self_model_container .model_recycle_info_wrap .info_wrap {
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-flow: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.recycle_container .self_model_container .model_recycle_info_wrap .info_wrap .price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    color: #FF5000;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    margin-top: -10rpx;
+}
+
+.recycle_container .self_model_container .model_recycle_info_wrap .info_wrap .price .price_title {
+    font-size: 24rpx;
+}
+
+.recycle_container .self_model_container .model_recycle_info_wrap .info_wrap .price .count {
+    font-size: 32rpx;
+}
+
+.recycle_container .self_model_container .model_recycle_info_wrap .info_wrap .btn_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.recycle_container .self_model_container .model_recycle_info_wrap .info_wrap .btn_wrap view {
+    text-align: center;
+    line-height: 60rpx;
+    font-size: 26rpx;
+}
+
+.recycle_container .self_model_container .model_recycle_info_wrap .info_wrap .btn_wrap .change_model {
+    width: 225rpx;
+    height: 60rpx;
+    background: -webkit-gradient(linear,left top,right top,from(#ffede5),to(#ffe0d2));
+    background: linear-gradient(90deg,#ffede5 0%,#ffe0d2 100%);
+    border-radius: 4rpx;
+    color: #ff5000;
+}
+
+.recycle_container .self_model_container .model_recycle_info_wrap .info_wrap .btn_wrap .test_price {
+    width: 317rpx;
+    height: 60rpx;
+    background: -webkit-gradient(linear,left top,right top,from(#ff6186),color-stop(34%,#ff783a),to(#ff5000));
+    background: linear-gradient(90deg,#ff6186 0%,#ff783a 34%,#ff5000 100%);
+    box-shadow: 0px 12rpx 14rpx 0px rgba(242,156,156,0.5);
+    border-radius: 4rpx;
+    color: #fff;
+}
+
+.recycle_container .repaircenter_container {
+    margin-top: 50rpx;
+}
+
+.recycle_container .repaircenter_container .repaircenter_title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.recycle_container .repaircenter_container .repaircenter_title .title_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.recycle_container .repaircenter_container .repaircenter_title .title_wrap .title {
+    color: #ACA3A3;
+    font-size: 30rpx;
+    margin-right: 10rpx;
+}
+
+.recycle_container .repaircenter_container .repaircenter_title .title_wrap .distance {
+    padding: 0 10rpx;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 36rpx;
+    background: #e6e6e6;
+    border-radius: 18rpx;
+}
+
+.recycle_container .repaircenter_container .repaircenter_title .title_wrap .distance image {
+    width: 25rpx;
+    height: 25rpx;
+}
+
+.recycle_container .repaircenter_container .repaircenter_title .title_wrap .distance view {
+    font-size: 22rpx;
+    color: #584F4F;
+}
+
+.recycle_container .repaircenter_container .repaircenter_title .other_wrap {
+    color: #584F4F;
+    font-size: 24rpx;
+}
+
+.recycle_container .repaircenter_container .repaircenter_info_wrap {
+    margin-top: 20rpx;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.recycle_container .repaircenter_container .repaircenter_info_wrap .repaircenter_info {
+    width: 500rpx;
+}
+
+.recycle_container .repaircenter_container .repaircenter_info_wrap .repaircenter_info .name {
+    color: #584F4F;
+    font-size: 30rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.recycle_container .repaircenter_container .repaircenter_info_wrap .repaircenter_info .tel {
+    margin-top: 16rpx;
+    color: #584F4F;
+    font-size: 28rpx;
+}
+
+.recycle_container .repaircenter_container .repaircenter_info_wrap .nav {
+    width: 96rpx;
+    height: 96rpx;
+}
+
+.recycle_container .recycle_process_container {
+    margin-top: 40rpx;
+}
+
+.recycle_container .recycle_process_container image {
+    width: 666rpx;
+    height: 108rpx;
+    display: block;
+    margin: 0 auto;
+}
+
+.recycle_container .hotrecycle_container {
+    padding-bottom: 80rpx;
+    margin-top: 75rpx;
+}
+
+.recycle_container .hotrecycle_container .hotrecycle_title_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.recycle_container .hotrecycle_container .hotrecycle_title_wrap .title {
+    color: #ACA3A3;
+    font-size: 30rpx;
+}
+
+.recycle_container .hotrecycle_container .hotrecycle_title_wrap .more {
+    color: #584F4F;
+    font-size: 24rpx;
+}
+
+.recycle_container .hotrecycle_container .hotrecycle_model_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recycle_container .hotrecycle_container .hotrecycle_model_wrap .model_wrap {
+    padding: 21rpx 25rpx;
+    box-sizing: border-box;
+    margin-top: 20rpx;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    width: 336rpx;
+    height: 216rpx;
+    background: white;
+    box-shadow: 0px 6rpx 18rpx 0px rgba(0,0,0,0.11);
+    border-radius: 4rpx;
+    position: relative;
+}
+
+.recycle_container .hotrecycle_container .hotrecycle_model_wrap .model_wrap .modelimage {
+    width: 96rpx;
+    height: 96rpx;
+    margin-right: 12rpx;
+}
+
+.recycle_container .hotrecycle_container .hotrecycle_model_wrap .model_wrap .model_info .model_name {
+    color: #584F4F;
+    font-size: 24rpx;
+}
+
+.recycle_container .hotrecycle_container .hotrecycle_model_wrap .model_wrap .model_info .wenan {
+    margin-top: 10rpx;
+    color: #ACA3A3;
+    font-size: 22rpx;
+}
+
+.recycle_container .hotrecycle_container .hotrecycle_model_wrap .model_wrap .model_info .price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+}
+
+.recycle_container .hotrecycle_container .hotrecycle_model_wrap .model_wrap .model_info .price .sym {
+    color: #FF5000;
+    font-size: 24rpx;
+}
+
+.recycle_container .hotrecycle_container .hotrecycle_model_wrap .model_wrap .model_info .price .count {
+    color: #FF5000;
+    font-size: 30rpx;
+}
+
+.recycle_container .hotrecycle_container .hotrecycle_model_wrap .model_wrap .tips {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 110rpx;
+    height: 48rpx;
+    background: -webkit-gradient(linear,left top,right top,from(#ffe6ec),to(#ffdbca));
+    background: linear-gradient(90deg,#ffe6ec 0%,#ffdbca 100%);
+    border-radius: 0px 24rpx 0px 0px;
+    text-align: center;
+    color: #FE3701;
+    font-size: 24rpx;
+    line-height: 48rpx;
+}
+
+.recycle_container .hotrecycle_container .hotrecycle_model_wrap .model_wrap.addmargin {
+    margin-right: 18rpx;
+}

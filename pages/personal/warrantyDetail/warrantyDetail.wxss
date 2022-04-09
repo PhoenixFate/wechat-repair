@@ -1,0 +1,55 @@
+.warranty_container {
+    min-height: 100vh;
+    background: #F7F5F4;
+    padding-top: 20rpx;
+}
+
+.warranty_wrap {
+    padding-left: 20rpx;
+    background: #fff;
+}
+
+.warranty_bg {
+    display: flex;
+    align-items: center;
+    padding: 20rpx 0;
+    border: 1rpx solid #E4E0DE;
+    position: relative;
+}
+
+.outdate {
+    position: absolute;
+    top: 9rpx;
+    right: 0;
+    width: 151rpx;
+    height: 106rpx;
+}
+
+.warranty_bg.noborder {
+    border: 0;
+}
+
+.warranty_image {
+    width: 46rpx;
+    height: 54rpx;
+    margin-right: 23rpx;
+}
+
+.name {
+    color: #584F4F;
+    font-size: 28rpx;
+}
+
+.time {
+    display: flex;
+    color: #584F4F;
+    font-size: 28rpx;
+}
+
+.title {
+    color: #ACA3A3;
+}
+
+.timeinfo.active {
+    color: #ACA3A3;
+}

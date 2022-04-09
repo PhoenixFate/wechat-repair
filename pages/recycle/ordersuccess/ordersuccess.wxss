@@ -1,0 +1,93 @@
+.ordersuccess_container {
+    padding-top: 170rpx;
+}
+
+.ordersuccess_container .ordersuccess_title {
+    padding: 0 30rpx;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #584F4F;
+    font-size: 58rpx;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.ordersuccess_container .ordersuccess_title image {
+    width: 66rpx;
+    height: 66rpx;
+    margin-right: 20rpx;
+}
+
+.ordersuccess_container .tips {
+    padding: 0 30rpx;
+    margin: 26rpx auto 0;
+    width: 467rpx;
+    font-size: 24rpx;
+    font-weight: 500;
+    color: #aea7a7;
+    line-height: 38rpx;
+    text-align: center;
+}
+
+.ordersuccess_container .btns {
+    padding: 0 30rpx;
+    margin-top: 26rpx;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.ordersuccess_container .btns view {
+    width: 139rpx;
+    height: 50rpx;
+    border-radius: 8rpx;
+    border: 1rpx solid #584f4f;
+    color: #584F4F;
+    font-size: 24rpx;
+    line-height: 50rpx;
+    text-align: center;
+}
+
+.ordersuccess_container .btns .addmargin {
+    margin-right: 40rpx;
+}
+
+.ordersuccess_container .otherpage {
+    margin-top: 258rpx;
+}
+
+.ordersuccess_container .otherpage .title {
+    padding: 0 30rpx;
+    color: #584F4F;
+    font-size: 30rpx;
+    font-weight: 500;
+}
+
+.ordersuccess_container .otherpage .imgbtn {
+    padding: 0 15rpx;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.ordersuccess_container .otherpage .imgbtn image {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 366rpx;
+    height: 234rpx;
+}

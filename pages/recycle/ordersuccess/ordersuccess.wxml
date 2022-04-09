@@ -1,0 +1,18 @@
+<view class="ordersuccess_container">
+    <view class="ordersuccess_title">
+        <image class="" src="../../../img/wx_recycle/success.png"></image>
+        提交成功
+    </view>
+    <view class="tips">您的回收信息已经提交成功，客服会在2小时内联系您，并有工程师上门回收</view>
+    <view class="btns">
+        <view bindtap="backIndex" class="addmargin">返回首页</view>
+        <view bindtap="seeOrder" class="">查看订单</view>
+    </view>
+    <view class="otherpage">
+        <view class="title">Hi家族欢迎您</view>
+        <view class="imgbtn">
+            <image bindtap="goPage" class="" data-url="../../repair/home/home" src="https://pic.hiweixiu.com/hiweixiu-mobile/img/repairIndex.png"></image>
+            <image bindtap="goPage" class="" data-url="../../HiYouxuan/youxuanhome/youxuanhome" src="https://pic.hiweixiu.com/hiweixiu-mobile/img/hiyouxuanIndex.png"></image>
+        </view>
+    </view>
+</view>

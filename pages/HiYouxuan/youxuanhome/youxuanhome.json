@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "Hi优品",
+    "usingComponents": {
+        "custom-tab-bar": "../../../components/custom-tab-bar/index"
+    }
+}

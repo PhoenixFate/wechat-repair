@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "搜索机型",
+    "enablePullDownRefresh": false,
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#f7f7f7",
+    "usingComponents": {
+        "custom-tab-bar": "../../../components/custom-tab-bar/index"
+    }
+}

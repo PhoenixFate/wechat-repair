@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "取消订单",
+    "usingComponents": {
+        "custom-tab-bar": "../../../components/custom-tab-bar/index"
+    }
+}

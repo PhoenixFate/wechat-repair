@@ -1,0 +1,22 @@
+<view class="voucher_container">
+    <view class="voucher_wrap" wx:for="{{couponList}}" wx:key="index">
+        <view bindtap="selectVoucher" class="voucher_info_wrap" data-index="{{index}}" data-item="{{item}}" data-price="{{item.min_price}}">
+            <view class="sym_price_condition">
+                <view class="sym_price">
+                    <view class="sym">￥</view>
+                    <view class="price">{{item.add_price}}</view>
+                </view>
+                <view class="condition">
+                    <view class="price_condition">满{{item.min_price}}使用</view>
+                    <view class="time_condition">{{item.start_time}}-{{item.end_time}}有效</view>
+                </view>
+            </view>
+            <view class="select" wx:if="{{selectedIndex!=index}}"></view>
+            <image class="select voucher_selected" src="../../../img/wx_recycle/selected.png" wx:else></image>
+            <image class="recycle" src="../../../img/wx_recycle/recycle_use.png"></image>
+        </view>
+    </view>
+    <view class="cancel_voucher">
+        <view bindtap="noUseVoucher" class="btn">不使用增值券</view>
+    </view>
+</view>

@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "填写物流信息",
+    "usingComponents": {
+        "custom-tab-bar": "../../../components/custom-tab-bar/index"
+    }
+}

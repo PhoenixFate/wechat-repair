@@ -1,0 +1,36 @@
+<view wx:if="{{isShow}}">
+    <view class="search">
+        <view bindtap="goToSearch" class="searchInput">请输入搜索的品牌 机型 型号</view>
+    </view>
+    <view class="content {{myMouldInfo!=null?'top90':'top0'}}">
+        <scroll-view scrollY style="height:{{windowHeight-50}}px;">
+            <view class="sidebar">
+                <view class="menu on hi_logo">
+                    <view class="">
+                        <image src="../../../img/hi_logo.png"></image>
+                    </view>
+                </view>
+                <view bindtap="selectBrand" class="menu {{selectedBrand.brand_id==item.brand_id?'on':''}}" data-id="{{item.brand_id}}" data-idx="{{index}}" wx:for="{{brandList}}" wx:key="key">
+                    <view class="txt {{item.brand_id=='35'||item.brand_id=='36'?'brand':''}}">{{item.brand_name}}
+                        </view>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="right">
+            <view class="tabs {{typeLIst.length<2?'onlyPhone':''}}">
+                <scroll-view scrollX style="width: 570rpx;">
+                    <view class="tabsContainer cl" style="width:{{scrollWidth}};">
+                        <button bindtap="selectType" class="fl nav {{tyleIndex==index?'on':''}}" data-index="{{index}}" data-productId="{{item.product_id}}" wx:for="{{typeLIst}}" wx:key="phone">{{item.series_name}}</button>
+                    </view>
+                </scroll-view>
+            </view>
+            <scroll-view scrollY class="list" scrollTop="{{scrollTop}}" style="height:{{windowHeight-100}}px;">
+                <view bindtap="selectPhone" class="item" data-idx="{{index}}" data-mouldId="{{item.model_id}}" data-mouldName="{{item.model_name}}" data-productId="{{item.product_id}}" wx:for="{{typeLIst[tyleIndex].devices}}" wx:key="phone">
+                    <image lazyload binderror="imageError" bindload="imgLoad" class="img {{animate?'animated fadeIn':''}}" data-phoneIndex="{{index}}" src="{{item.src}}"></image>
+                    <view class="con">{{item.model_name}}</view>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="maskView" hidden="{{maskHidden}}"></view>
+    </view>
+</view>

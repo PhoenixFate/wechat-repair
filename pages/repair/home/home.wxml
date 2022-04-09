@@ -1,0 +1,129 @@
+<view class="box container-sy animated fadeIn" wx:if="{{isShow}}">
+    <view class="bd">
+        <swiper circular autoplay="{{autoplay}}" class="bg" duration="{{duration}}" indicatorActiveColor="{{active_color}}" indicatorColor="{{color}}" interval="{{interval}}">
+            <swiper-item wx:for="{{bannerList}}" wx:key="key">
+                <view class="bg" style="text-align:center">
+                    <image bindtap="bannerJump" class="bg" data-jump="{{item.page_path}}" mode="aspectFill" src="{{item.src}}"></image>
+                </view>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="tips_wrap">
+        <image class="" src="https://image.hiweixiu.com/weapp/index/icon/4lei%402x.png"></image>
+    </view>
+    <view class="submain">
+        <view bindtap="goToSelectFault" class="group" data-id="{{item.id}}" data-index="{{index}}" data-name="{{item.name}}" wx:for="{{navArr}}" wx:key="index">
+            <image class="small-item" src="{{item.src}}"></image>
+            <text class="notebook">{{item.name}}</text>
+        </view>
+    </view>
+    <view class="activity_nav">
+        <view bindtap="goToSelectFault" class="" data-id="{{item.id}}" data-name="{{item.name}}" wx:for="{{activityArr}}" wx:key="index">
+            <image class="img_wrap" data-origin="goToOneKeyOrder" src="{{item.src}}" wx:if="{{item.name=='一键下单'?isLogin?true:false:true}}"></image>
+            <button bindgetphonenumber="getPhoneNumber" class="img_wrap" data-origin="goToOneKeyOrder" openType="getPhoneNumber" wx:else>
+                <image src="{{item.src}}"></image>
+            </button>
+        </view>
+    </view>
+    <view class="fuli_wrap">
+        <view bindtap="navigatoTo" class="fuli" data-name="{{item.name}}" wx:for="{{couponArr}}" wx:key="index">
+            <image class="" src="{{item.src}}"></image>
+        </view>
+    </view>
+    <text class="row-1" wx:if="{{selfModelShow}}">检测到您的机型</text>
+    <view class="row-2" wx:if="{{selfModelShow}}">
+        <view style="display:flex;">
+            <image class="pic-2" src="{{selectedDevice.src?selectedDevice.src:'../../../img/wx_index/unknow.jpg'}}"></image>
+            <view class="group-4">
+                <view class="iphone">{{selectedDevice.name}}</view>
+                <view class="container-4">
+                    <view class="price" wx:if="{{selectedDevice.price_range}}">¥</view>
+                    <view class="money">
+                        {{selectedDevice.price_range?selectedDevice.price_range:'可选择回收服务'}}
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view bindtap="bindIcon" class="repair-wrap" wx:if="{{selectedDevice.price_range}}">
+            <text class="repair">去维修</text>
+        </view>
+        <view bindtap="goToRecycle" class="repair-wrap" wx:else>
+            <text class="repair">去回收</text>
+        </view>
+    </view>
+    <view class="row-3">
+        <view view class="block-5">
+            <scroll-view scrollX style="width: 700rpx;white-space: nowrap;">
+                <text bindtap="selectHot" class="camera {{selectIndex==index?'active':''}}" data-index="{{index}}" wx:for="{{hotMouldData}}" wx:key="key">
+                    {{item.name}}
+                </text>
+            </scroll-view>
+            <scroll-view scrollX style="width: 700rpx;white-space: nowrap;padding:20rpx 0;height:300rpx;">
+                <view bindtap="bindIcon" class="hot-mould" data-color_id="{{item.color_id}}" data-faultId="{{hotMouldData[selectIndex].id}}" data-id="{{item.id}}" data-name="{{item.name}}" data-rp_id="{{item.rp_id}}" wx:for="{{hotMouldData[selectIndex].children}}" wx:key="key">
+                    <view class="iphone-wrap">
+                        <text class="iphone-2">{{item.name}}</text>
+                    </view>
+                    <view class="info-wrap">{{item.faulttype_detail_name}}</view>
+                    <view class="block-6">
+                        <view>
+                            <text style="font-size:24rpx;">￥</text>
+                            {{item.price}}
+                        </view>
+                        <view class="money-wrap">
+                            <text style="font-size:24rpx;">￥</text>
+                            {{item.official_price}}
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="row-4">
+        <view class="title-2">
+            <view class="">小马维修中心门店</view>
+            <image class="" src="../../../img/wx_recycle/distance.png"></image>
+            <view class="" style="font-size:22rpx">{{repairCenter.nearDistance}}</view>
+        </view>
+        <view bindtap="goToStoreAddress" class="more">更多门店信息</view>
+    </view>
+    <view class="row-5">
+        <view class="block-8">
+            <view class="tel-prev">{{repairCenter.address}}</view>
+            <view class="tel" style="margin-top:14rpx">
+                <view bindtap="openPhoneLocation" class="local" data-lat="{{repairCenter.lat}}" data-lng="{{repairCenter.lng}}">
+                    <image class="" src="../../../img/search/local.png"></image>
+                    <view class="">导航</view>
+                </view>
+                <view bindtap="callCenter" class="local" data-phone="{{repairCenter.mobile}}" style="margin-left:40rpx">
+                    <image class="" src="../../../img/call.png"></image>
+                    <view class="">电话</view>
+                </view>
+            </view>
+        </view>
+        <image class="entry-pic-2" src="{{repairCenter.src}}"></image>
+    </view>
+    <view class="row-9">
+        <image class="background" src="https://image.hiweixiu.com/weapp/index/icon/tupian%20pinpai%402x.png"></image>
+    </view>
+    <image class="ft" src="https://image.hiweixiu.com/weapp/index/icon/pinphezuo%402x.png"></image>
+</view>
+<view class="refresher" wx:if="{{showRefresher}}">
+    <text>网络开小差了~</text>
+    <button bindtap="onLoad" class="refreshBtn">点击刷新</button>
+</view>
+<view wx:if="{{activityInfoData.switch==1}}">
+    <view catchtouchmove="ture" class="dialog_bg" wx:if="{{giftShow&&isShow}}"></view>
+    <view catchtouchmove="ture" class="gift_dialog" wx:if="{{giftShow&&isShow}}">
+        <view catchtouchmove="ture" class="gift_dialog_main">
+            <view class="img">
+                <button bindgetphonenumber="getPhoneNumber" class="gift_button_bg" data-origin="dialog" openType="getPhoneNumber" wx:if="{{!isLogin}}">
+                    <image src="{{activityInfoData.image_url}}"></image>
+                </button>
+                <view bindtap="dialogTo" wx:else>
+                    <image src="{{activityInfoData.image_url}}"></image>
+                </view>
+            </view>
+            <view bindtap="closeDialog" class="close"></view>
+        </view>
+    </view>
+</view>

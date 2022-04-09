@@ -1,0 +1,118 @@
+<view class="commitorder_container">
+    <view class="commitorder_model_container">
+        <view class="title">当前估价机型：</view>
+        <view class="model">{{faultPrice.model_info.name}}</view>
+    </view>
+    <view class="price_container">
+        <view class="price_wrap">
+            <view class="sym">￥</view>
+            <view class="price">{{faultPrice.recycle_info.price}}</view>
+            <image bindtap="showResult" class="" src="../../../img/wx_recycle/shuoming.png"></image>
+        </view>
+        <view bindtap="showMiniapp" class="addminiapp" data-showMiniapp="1">重新询价</view>
+    </view>
+    <view class="nearby_container">
+        <view class="tip">Hi回收只支持免费上门回收，您可</view>
+        <view bindtap="nearbyCenter" class="watchnearby">查看附近门店></view>
+    </view>
+    <image class="" src="https://pic.hiweixiu.com/hiweixiu-mobile/img/free.png" style="width:100%;height:110rpx;margin-top:40rpx"></image>
+    <view class="commitorder_type_container">上门回收</view>
+    <view class="userinfo_container">
+        <view class="address_wrap">
+            <view class="address">
+                <image class="addimg" src="../../repair/createOrder/image/add_icon.png" wx:if="{{!isAddress}}"></image>
+                <view bindtap="goAddaddress" class="no_address" wx:if="{{!isAddress}}">添加上门地址</view>
+                <view bindtap="goSelectAddress" class="has_address" wx:else>
+                    <view class="">
+                        {{defaultAddress.province_name}}{{defaultAddress.city_name}}{{defaultAddress.district_name}}{{defaultAddress.address}}
+                    </view>
+                    <view class="" style="margin-top:5rpx">
+                        {{defaultAddress.user_name}}   {{defaultAddress.mobile}}
+                    </view>
+                </view>
+            </view>
+            <image class="arrowright" src="../../../img/arrowright.png"></image>
+        </view>
+        <image class="fengexian" src="../../repair/createOrder/image/line.png"></image>
+        <view bindtap="timeUp" class="ordertime_wrap">
+            <view style="display:flex;align-items:center;justify-content:space-between;border-bottom:1rpx solid #E4E0DE;min-height: 98rpx;">
+                <view class="ordertime {{orderTime?'active':''}}">
+                    {{orderTime?orderTime:'选择上门时间'}}
+                </view>
+                <image class="arrowright" src="../../../img/arrowright.png"></image>
+            </view>
+        </view>
+        <view class="remark">
+            <text class="textareatext {{remark?'active':''}}" wx:if="{{isModelShow||isShowAddminiapp}}">{{remark?remark:'请输入备注（选填）'}}</text>
+            <textarea autoHeight="true" bindinput="remarkNameInput" class="textarea" maxlength="100" placeholder="请输入备注（选填）" placeholderStyle="color:#C7C0BC;font-weight:400;" value="{{remark}}" wx:else></textarea>
+        </view>
+    </view>
+    <view class="commitorder_type_container">结款方式</view>
+    <view class="pay_tip_container">
+        Hi回收现只支持
+        <view>支付宝</view>
+        结款
+    </view>
+    <view class="userinfo_pay_container">
+        <input bindinput="userNameInput" class="pay_username" placeholder="请输入支付宝绑定的真实姓名" placeholderStyle="color:#C7C0BC;font-size:26rpx" type="text" value=""></input>
+        <input bindinput="phoneNameInput" class="pay_phone" placeholder="请输入支付宝账号" placeholderStyle="color:#C7C0BC;font-size:26rpx" type="text" value=""></input>
+    </view>
+    <view bindtap="goZengzhiquan" class="zengzhi_container">
+        <view class="tip" wx:if="{{!voucherInfo}}">使用增值券</view>
+        <view class="tip used_voucher" wx:else>已使用增值券</view>
+        <view class="quancount">
+            <view class="count" wx:if="{{!voucherInfo}}">{{zengzhiquanCount}}张券</view>
+            <view class="count" wx:else>+￥{{voucherInfo.add_price}}</view>
+            <image class="arrowright" src="../../../img/arrowright.png"></image>
+        </view>
+    </view>
+    <image class="progress" src="../../../img/wx_recycle/process.png"></image>
+    <view class="commitbtn_container {{isFullSucreen?'fullscreen':''}}">
+        <view class="commit_price_wrap">
+            <view class="tip">预估回收价：</view>
+            <view class="price">
+                <view class="sym">￥</view>
+                <view class="count">{{totalPrice}}</view>
+            </view>
+        </view>
+        <view bindtap="commitOrder" class="btn">立即提交</view>
+    </view>
+</view>
+<view bindtap="popDown" catch:touchmove="true" class="modalBg" wx:if="{{isModelShow}}"></view>
+<view animation="{{timeAnimation}}" class="modalContent">
+    <view class="modalTop">
+        <view class="closeBtn"></view>
+        <view class="modalTitle">请选择预约时间</view>
+        <view bindtap="confirmTime" class="confirmBtn">完成</view>
+    </view>
+    <view class="center_list">
+        <picker-view bindchange="timeChange" indicatorStyle="height: 60rpx;" style="width: 100%; height: 420rpx;text-align:center;font-size:28rpx;" value="{{timeval}}">
+            <picker-view-column>
+                <view style="line-height: 60rpx" wx:for="{{dateList}}" wx:key="key">
+                    {{item.date}}
+                </view>
+            </picker-view-column>
+            <picker-view-column>
+                <view style="line-height: 60rpx" wx:for="{{periods}}" wx:key="key">
+                    {{item.start_time}}-{{item.next_time}}
+                </view>
+            </picker-view-column>
+        </picker-view>
+    </view>
+</view>
+<view animation="{{resultAnimation}}" catch:touchmove="true" class="result_container">
+    <image bindtap="closeResult" class="" src="../../../img/wx_recycle/close.png"></image>
+    <view class="result_wrap">
+        <view class="result_title">评估结果</view>
+        <scroll-view class="result_detail_wrap" scrollY="true">
+            <view class="result_detail {{index+1==faultPrice.model_fault_attrs.length?'noborder':''}}" wx:for="{{faultPrice.model_fault_attrs}}" wx:key="index">
+                <view class="title">{{item.name}}</view>
+                <view class="detail">{{item.descr}}</view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
+<view bindtap="showMiniapp" class="addMiniapp {{isShowAddminiapp?'animated fadeIn':''}}" data-showMiniapp="0" wx:if="{{isShowAddminiapp}}">
+    <image class="arrow" src="../../../img/wx_recycle/arrowtop.png"></image>
+    <image class="add" src="http://pic.hiweixiu.com/hiweixiu-mobile/img/tip.png"></image>
+</view>

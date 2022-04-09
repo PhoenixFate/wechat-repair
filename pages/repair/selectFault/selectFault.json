@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "选择故障大类",
+    "usingComponents": {
+        "custom-tab-bar": "../../../components/custom-tab-bar/index"
+    }
+}

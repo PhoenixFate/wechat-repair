@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "快递信息",
+    "usingComponents": {
+        "custom-tab-bar": "../../../components/custom-tab-bar/index"
+    }
+}

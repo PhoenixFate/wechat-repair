@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "小马维修-维修中心",
+    "usingComponents": {
+        "custom-tab-bar": "../../components/custom-tab-bar/index"
+    }
+}

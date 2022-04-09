@@ -1,0 +1,526 @@
+.commitorder_container {
+    padding: 18rpx 30rpx 140rpx;
+    box-sizing: border-box;
+}
+
+.commitorder_container.fullscreen {
+    padding-bottom: 36rpx;
+}
+
+.commitorder_container .commitorder_model_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #584F4F;
+    font-size: 24rpx;
+}
+
+.commitorder_container .commitorder_model_container .model {
+    font-weight: bold;
+}
+
+.commitorder_container .price_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.commitorder_container .price_container .price_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    color: #584F4F;
+}
+
+.commitorder_container .price_container .price_wrap .sym {
+    font-size: 48rpx;
+}
+
+.commitorder_container .price_container .price_wrap .price {
+    font-size: 88rpx;
+    font-weight: bold;
+}
+
+.commitorder_container .price_container .price_wrap image {
+    width: 30rpx;
+    height: 30rpx;
+    margin-left: 10rpx;
+}
+
+.commitorder_container .price_container .addminiapp {
+    width: 160rpx;
+    height: 44rpx;
+    border-radius: 26rpx;
+    border: 1rpx solid rgba(88,79,79,0.5);
+    color: #584F4F;
+    font-size: 24rpx;
+    text-align: center;
+    line-height: 44rpx;
+}
+
+.commitorder_container .reprice_container {
+    width: 96rpx;
+    height: 33rpx;
+    font-size: 24rpx;
+    color: #ff5000;
+    line-height: 33rpx;
+    text-decoration: underline;
+}
+
+.commitorder_container .nearby_container {
+    margin-top: 20rpx;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 24rpx;
+}
+
+.commitorder_container .nearby_container .tip {
+    color: #ACA3A3;
+}
+
+.commitorder_container .nearby_container .watchnearby {
+    color: #ff5000;
+    text-decoration: underline;
+}
+
+.commitorder_container .commitorder_type_container {
+    margin-top: 40rpx;
+    color: #584F4F;
+    font-size: 30rpx;
+}
+
+.commitorder_container .pay_tip_container {
+    margin-top: 10rpx;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    color: #ACA3A3;
+    font-size: 24rpx;
+}
+
+.commitorder_container .pay_tip_container view {
+    color: #00AAF9;
+}
+
+.commitorder_container .userinfo_pay_container {
+    margin-top: 10rpx;
+    box-shadow: 0px 6rpx 14rpx 0px rgba(0,0,0,0.08);
+    border-radius: 8rpx;
+    padding: 0 15rpx;
+}
+
+.commitorder_container .userinfo_pay_container input {
+    padding: 0 10rpx;
+    height: 97rpx;
+    color: #584F4F;
+    font-size: 26rpx;
+}
+
+.commitorder_container .userinfo_pay_container .pay_username {
+    line-height: 97rpx;
+    border-bottom: 1rpx solid #E4E0DE;
+}
+
+.commitorder_container .userinfo_pay_container .pay_phone {
+    height: 98rpx;
+    line-height: 98rpx;
+}
+
+.commitorder_container .userinfo_container {
+    margin-top: 10rpx;
+    box-shadow: 0px 6rpx 14rpx 0px rgba(0,0,0,0.08);
+    border-radius: 8rpx;
+}
+
+.commitorder_container .userinfo_container .address_wrap {
+    padding: 22rpx 25rpx;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    min-height: 98rpx;
+    box-sizing: border-box;
+}
+
+.commitorder_container .userinfo_container .address_wrap .address {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.commitorder_container .userinfo_container .address_wrap .address .addimg {
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 15rpx;
+}
+
+.commitorder_container .userinfo_container .address_wrap .address .no_address {
+    width: 600rpx;
+    color: #C7C0BC;
+    font-size: 26rpx;
+}
+
+.commitorder_container .userinfo_container .address_wrap .address .has_address {
+    width: 600rpx;
+    color: #584F4F;
+    font-size: 26rpx;
+}
+
+.commitorder_container .userinfo_container .address_wrap .arrowright {
+    width: 25rpx;
+    height: 30rpx;
+}
+
+.commitorder_container .userinfo_container .ordertime_wrap {
+    padding: 0 25rpx;
+    min-height: 98rpx;
+}
+
+.commitorder_container .userinfo_container .ordertime_wrap .arrowright {
+    width: 25rpx;
+    height: 30rpx;
+}
+
+.commitorder_container .userinfo_container .fengexian {
+    width: 100%;
+    height: 6rpx;
+    display: block;
+}
+
+.commitorder_container .userinfo_container .ordertime_wrap .ordertime {
+    color: #C7C0BC;
+    font-size: 26rpx;
+}
+
+.commitorder_container .userinfo_container .ordertime_wrap .ordertime.active {
+    color: #584F4F;
+}
+
+.commitorder_container .userinfo_container .remark .textarea {
+    display: block;
+    width: 100%;
+    padding: 18rpx 18rpx;
+    font-size: 26rpx;
+    box-sizing: border-box;
+    min-height: 120rpx;
+}
+
+.commitorder_container .userinfo_container .remark .textareatext {
+    display: block;
+    width: 100%;
+    padding: 30rpx 26rpx;
+    font-size: 26rpx;
+    box-sizing: border-box;
+    min-height: 94rpx;
+    color: #C7C0BC;
+    font-weight: 400;
+}
+
+.commitorder_container .userinfo_container .remark .textareatext.active {
+    display: block;
+    width: 100%;
+    padding: 30rpx 26rpx;
+    font-size: 26rpx;
+    box-sizing: border-box;
+    min-height: 98rpx;
+    color: #584F4F;
+    font-weight: 400;
+}
+
+.commitorder_container .zengzhi_container {
+    margin-top: 20rpx;
+    padding: 0 25rpx;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 98rpx;
+    background: white;
+    box-shadow: 0px 6rpx 14rpx 0px rgba(0,0,0,0.08);
+    border-radius: 8rpx;
+}
+
+.commitorder_container .zengzhi_container .tip {
+    color: #C7C0BC;
+    font-size: 26rpx;
+}
+
+.commitorder_container .zengzhi_container .used_voucher {
+    color: #584F4F;
+}
+
+.commitorder_container .zengzhi_container .quancount {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.commitorder_container .zengzhi_container .quancount .count {
+    padding: 6rpx 10rpx;
+    background: -webkit-gradient(linear,left top,right top,from(#ff6186),to(#ff5000));
+    background: linear-gradient(90deg,#ff6186 0%,#ff5000 100%);
+    border-radius: 8rpx;
+    color: #fff;
+    font-size: 24rpx;
+    text-align: center;
+}
+
+.commitorder_container .zengzhi_container .quancount .arrowright {
+    width: 25rpx;
+    height: 30rpx;
+}
+
+.commitorder_container .progress {
+    display: block;
+    margin: 40rpx auto 0;
+    width: 666rpx;
+    height: 108rpx;
+}
+
+.commitorder_container .commitbtn_container {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    padding: 18rpx 20rpx;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 108rpx;
+    background: #fff;
+    box-shadow: 0px -5rpx 17rpx 0px rgba(0,0,0,0.06);
+}
+
+.commitorder_container .commitbtn_container.fullscreen {
+    padding-bottom: 36rpx;
+}
+
+.commitorder_container .commitbtn_container .commit_price_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.commitorder_container .commitbtn_container .commit_price_wrap .tip {
+    color: #7F7676;
+    font-size: 24rpx;
+}
+
+.commitorder_container .commitbtn_container .commit_price_wrap .price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    font-weight: bold;
+    color: #FF5000;
+}
+
+.commitorder_container .commitbtn_container .commit_price_wrap .price .sym {
+    font-size: 26rpx;
+}
+
+.commitorder_container .commitbtn_container .commit_price_wrap .price .count {
+    font-size: 38rpx;
+}
+
+.commitorder_container .commitbtn_container .btn {
+    width: 361rpx;
+    height: 72rpx;
+    background: -webkit-gradient(linear,left top,right top,from(#ff854d),to(#ff5000));
+    background: linear-gradient(90deg,#ff854d 0%,#ff5000 100%);
+    border-radius: 8rpx;
+    text-align: center;
+    line-height: 72rpx;
+    color: #fff;
+    font-size: 30rpx;
+}
+
+.modalBg {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 590;
+}
+
+.modalContent {
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 600;
+    transition: transform 0.3s;
+    transition: transform 0.3s,-webkit-transform 0.3s;
+    border-radius: 10px 10px 0px 0px;
+    padding: 0px 16px 0;
+    box-sizing: border-box;
+    transform: translateY(100%);
+}
+
+.modalTop {
+    padding: 20rpx 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 28rpx;
+    color: #000;
+}
+
+.result_container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 600;
+    height: 944rpx;
+    width: 100%;
+    border-radius: 20rpx 20rpx 0 0;
+    background: #fff;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+    transition: transform 0.3s,-webkit-transform 0.3s;
+}
+
+.result_container image {
+    position: absolute;
+    right: 20rpx;
+    top: 10rpx;
+    width: 34rpx;
+    height: 34rpx;
+}
+
+.result_container .result_wrap .result_title {
+    height: 106rpx;
+    line-height: 106rpx;
+    color: #584F4F;
+    font-size: 30rpx;
+    text-align: center;
+}
+
+.result_container .result_wrap .result_detail_wrap {
+    padding-left: 30rpx;
+    box-sizing: border-box;
+    height: 838rpx;
+}
+
+.result_container .result_wrap .result_detail_wrap .result_detail {
+    padding-right: 30rpx;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    height: 97rpx;
+    border-bottom: 1rpx solid #E4E0DE;
+    font-size: 24rpx;
+}
+
+.result_container .result_wrap .result_detail_wrap .result_detail .title {
+    color: #ACA3A3;
+}
+
+.result_container .result_wrap .result_detail_wrap .result_detail .detail {
+    color: #584F4F;
+}
+
+.result_container .result_wrap .result_detail_wrap .result_detail.noborder {
+    border-bottom: 0;
+    height: 98rpx;
+}
+
+.addMiniapp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.addMiniapp .arrow {
+    position: absolute;
+    top: 10rpx;
+    right: 130rpx;
+    width: 203rpx;
+    height: 264rpx;
+}
+
+.addMiniapp .add {
+    position: absolute;
+    top: 393rpx;
+    right: 152rpx;
+    width: 464rpx;
+    height: 528rpx;
+}

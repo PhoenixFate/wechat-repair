@@ -1,0 +1,110 @@
+.voucher_container {
+    min-height: 100vh;
+    background: #F7F5F4;
+    box-sizing: border-box;
+    padding: 20rpx 20rpx;
+}
+
+.voucher_container .voucher_wrap {
+    margin-bottom: 40rpx;
+}
+
+.voucher_container .voucher_wrap .voucher_info_wrap {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    background: url(https://pic.hiweixiu.com/hiweixiu-mobile/img/voucher.png) no-repeat;
+    background-size: 100% 100%;
+    padding: 40rpx;
+    box-sizing: border-box;
+}
+
+.voucher_container .voucher_wrap .voucher_info_wrap .sym_price_condition {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.voucher_container .voucher_wrap .voucher_info_wrap .sym_price_condition .sym_price {
+    margin-right: 20rpx;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 160rpx;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    color: #ff5000;
+}
+
+.voucher_container .voucher_wrap .voucher_info_wrap .sym_price_condition .sym_price .sym {
+    font-size: 40rpx;
+}
+
+.voucher_container .voucher_wrap .voucher_info_wrap .sym_price_condition .sym_price .price {
+    font-size: 68rpx;
+}
+
+.voucher_container .voucher_wrap .voucher_info_wrap .sym_price_condition .condition {
+    color: #aca3a3;
+    font-size: 24rpx;
+}
+
+.voucher_container .voucher_wrap .voucher_info_wrap .select {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 56rpx;
+    height: 56rpx;
+    border-radius: 100%;
+    border: 1rpx solid #ff5000;
+}
+
+.voucher_container .voucher_wrap .voucher_info_wrap .select.voucher_selected {
+    border: 0;
+}
+
+.voucher_container .voucher_wrap .voucher_info_wrap .recycle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 192rpx;
+    height: 72rpx;
+}
+
+.voucher_container .cancel_voucher {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16rpx 70rpx 40rpx;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.voucher_container .cancel_voucher .btn {
+    width: 100%;
+    height: 72rpx;
+    background: white;
+    border-radius: 12rpx;
+    border: 1rpx solid #ff5000;
+    color: #ff5000;
+    line-height: 72rpx;
+    text-align: center;
+    font-size: 34rpx;
+}
